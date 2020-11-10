@@ -19,7 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         header("Location: viewrecords.php");
     }
 }
-
 ?>
 
 <h1 class="text-center"><?php echo $title ?></h1>
