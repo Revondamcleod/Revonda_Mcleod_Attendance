@@ -22,10 +22,25 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link"  href = "dateTimeManupilation.php">DATE TIME MANUPILATION</a>
-      <a class="nav-item nav-link"  href = "arrays.php">ARRAYS</a>
-      <a class="nav-item nav-link" href = "forLoops.php">FOR LOOPS</a>
-      <a class="nav-item nav-link disabled" href="#">Disabled</a>
+      <a class="nav-item nav-link" href="viewrecords.php">View Attendees</a>  
+
+      <ul class="navbar-nav ml-auto">  
+                <?php 
+                    if(!isset($_SESSION['userid'])){
+                ?>                      
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.php">Login</a>
+                    </li>  
+                <?php }else {?>  
+                    <li>
+                    <a class="nav-link" href="#"><spam>Hello <?php echo $_SESSION['username'] ?>!</spam></a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="logout.php">Logout</a>
+                    </li>
+                <?php }?>                    
+            </ul>
+
     </div>
   </div>
 </nav>
